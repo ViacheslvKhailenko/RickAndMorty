@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">ProjectAndersen</string>
+    <string name="locations">Locations</string>
+    <string name="characters">Characters</string>
+    <string name="image_of_the_main_character">Image of the main character</string>
+    <string name="episodes">Episodes</string>
+    <string name="filter">Open filter page</string>
+    <string name="filter_characters">Filter for characters</string>
+    <string name="filter_locations">Filter for locations</string>
+    <string name="filter_episodes">Filter for episodes</string>
+    <string name="filter_name_hint">Enter character name or leave the field empty</string>
+    <string name="filter_location_name">Enter location name or leave the field empty</string>
+    <string name="filter_episode_name">Enter episode name or leave the field empty</string>
+    <string name="alive">Alive</string>
+    <string name="dead">Dead</string>
+    <string name="unknown">Unknown</string>
+    <string name="filter_status">Status</string>
+    <string name="filter_species">Enter character species or leave the field empty</string>
+    <string name="filter_type">Enter character type or leave the field empty</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="genderless">Genderless</string>
+    <string name="apply_filter">Apply filter</string>
+    <string name="back_to_list">Back to list</string>
+    <string name="clear_all_filters">Clear all filters</string>
+    <string name="Episodes">Episodes</string>
+    <string name="filter_location_episode_code">Enter episode code or leave the field empty</string>
+    <string name="filter_location_dimension">Enter location dimension or leave the field empty</string>
+    <string name="filter_location_type">Enter location type or leave the field empty</string>
+    <string name="infoMessage">"Sorry, I didn't have time to finalize this filter. But I have prepared filter for Characters Fragment"</string>
+</resources>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/filterCharacters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/filter_characters"
+                android:textSize="45sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/filterEnterCharacterName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/filter_name_hint"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/filterCharacters" />
+
+            <TextView
+                android:id="@+id/filterStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/filter_status"
+                android:textSize="45sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/filterEnterCharacterName" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/filterStatus">
+
+                <RadioButton
+                    android:id="@+id/radioStatusAlive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/alive" />
+
+                <RadioButton
+                    android:id="@+id/radioStatusDead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dead" />
+
+                <RadioButton
+                    android:id="@+id/radioStatusUnknown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/unknown" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/filterEnterCharacterSpecies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/filter_species"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/radioGroupStatus" />
+
+            <EditText
+                android:id="@+id/filterEnterCharacterType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/filter_type"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/filterEnterCharacterSpecies" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/filterEnterCharacterType">
+
+                <RadioButton
+                    android:id="@+id/radioGenderFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/female" />
+
+                <RadioButton
+                    android:id="@+id/radioGenderMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/male" />
+
+                <RadioButton
+                    android:id="@+id/radioGenderGenderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/genderless" />
+
+                <RadioButton
+                    android:id="@+id/radioGenderUnknown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/unknown" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/backToList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/back_to_list"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/applyFilter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/radioGroupGender" />
+
+            <Button
+                android:id="@+id/applyFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/apply_filter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/backToList"
+                app:layout_constraintTop_toBottomOf="@id/radioGroupGender" />
+
+            <Button
+                android:id="@+id/clearFilters"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/clear_all_filters"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/applyFilter" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
